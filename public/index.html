@@ -7,15 +7,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <h1> ArteMundial</h1>
+
+  <header class="hero">
+    <p class="hero-eyebrow">✦ Galería de arte contemporáneo ✦</p>
+    <h1>Arte<em>Mundial</em></h1>
+    <div class="hero-ornament"><span>◆</span></div>
     <p>Obras de arte de todos los rincones del planeta</p>
     <button id="btnAbrirCompra" class="btn-compra-header"> Registrar compra</button>
   </header>
 
   <div id="modalCompra" class="modal-overlay" style="display:none;">
     <div class="modal">
-      <h2>Registrar compra</h2>
+      <div class="modal-head">
+        <h2>Registrar compra</h2>
+        <button type="button" id="btnCerrarCompra" class="modal-close" aria-label="Cerrar">&times;</button>
+      </div>
       <form id="compraForm">
         <label>Obra</label>
         <select id="compraObraId" required></select>
@@ -26,27 +32,30 @@
         <label>Cantidad</label>
         <input type="number" id="compraCantidad" min="1" value="1" required />
 
+        <input type="text" id="categoria" placeholder="Categoría (Pintura, Escultura…)" required />
+
         <p id="compraErrores" class="errores"></p>
 
         <div class="form-botones">
-          <button type="submit">Confirmar compra</button>
-          <button type="button" id="btnCerrarCompra">Cancelar</button>
+          <button type="submit" class="btn-guardar">Confirmar compra</button>
+          <button type="button" id="btnCancelarCompraModal" class="btn-cancelar">Cancelar</button>
         </div>
       </form>
     </div>
   </div>
 
   <main class="container">
+
     <section class="compras-registradas">
-      <h2> Compras registradas</h2>
+      <h2>Compras registradas</h2>
       <div id="listaCompras"></div>
     </section>
 
     <section class="filtros">
-      <input type="text" id="buscar" placeholder="Buscar por título o artista..." />
-      <input type="text" id="filtroPais" placeholder="Filtrar por país..." />
-      <button id="btnBuscar">Buscar</button>
-      <button id="btnLimpiar">Limpiar</button>
+      <input type="text" id="buscar" placeholder="Buscar por título o artista…" />
+      <input type="text" id="filtroPais" placeholder="Filtrar por país…" />
+      <button class="btn-buscar" id="btnBuscar"> Buscar</button>
+      <button class="btn-limpiar" id="btnLimpiar">Limpiar</button>
     </section>
 
     <section class="form-section">
@@ -56,20 +65,38 @@
         <input type="text" id="titulo" placeholder="Título de la obra" required />
         <input type="text" id="artista" placeholder="Artista" required />
         <input type="text" id="pais" placeholder="País" required />
-        <input type="text" id="categoria" placeholder="Categoría (Pintura, Escultura...)" />
+        
+        <!-- Categoría desplegable con opción de nueva categoría -->
+        <div style="grid-column: 1 / -1; display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <select id="categoriaSelect" style="flex: 1; min-width: 200px; padding: 0.85rem 1.2rem; border: 1px solid rgba(230,225,218,0.15); border-radius: 10px; background: rgba(255,255,255,0.05); color: #f4f1ea; font-family: inherit; font-size: 1rem;">
+            <option value="" style="background: #16100e;">Selecciona una categoría...</option>
+            <option value="Pintura" style="background: #16100e;">Pintura</option>
+            <option value="Escultura" style="background: #16100e;">Escultura</option>
+            <option value="Fotografía" style="background: #16100e;">Fotografía</option>
+            <option value="Nueva" style="background: #16100e;">+ Agregar nueva categoría...</option>
+          </select>
+          <input type="text" id="nuevaCategoriaInput" placeholder="Escribe la nueva categoría" style="display: none; flex: 1; min-width: 200px;" />
+        </div>
+
         <input type="number" id="precio" placeholder="Precio (USD)" min="0" required />
         <input type="url" id="imagenUrl" placeholder="URL de la imagen (opcional)" />
         <textarea id="descripcion" placeholder="Descripción"></textarea>
+        
         <div class="form-botones">
-          <button type="submit" id="btnGuardar">Guardar obra</button>
-          <button type="button" id="btnCancelar" style="display:none;">Cancelar</button>
+          <button type="submit" id="btnGuardar" class="btn-guardar">Guardar obra</button>
+          <button type="button" id="btnCancelar" class="btn-cancelar" style="display:none;">Cancelar</button>
         </div>
       </form>
       <p id="errores" class="errores"></p>
     </section>
 
     <section class="galeria" id="galeria"></section>
+
   </main>
+
+  <footer class="footer">
+    <p>ArteMundial <span>◆</span> 2026 — Con amor para los amantes del arte</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
