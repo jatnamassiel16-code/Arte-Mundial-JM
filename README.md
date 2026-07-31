@@ -36,3 +36,6 @@ Luego abre http://localhost:3000
 
 Ver `scripts/setup-git-flow.sh` para el detalle de las ramas y Pull Requests
 generadas.
+=======
+# Arte-Mundial-JM
+Sistema donde podemos comprar y vender Arte en el mundo entero
