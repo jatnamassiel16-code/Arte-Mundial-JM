@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArteMundial — Arte de todo el mundo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1> ArteMundial</h1>
+    <p>Obras de arte de todos los rincones del planeta</p>
+    <button id="btnAbrirCompra" class="btn-compra-header"> Registrar compra</button>
+  </header>
+
+  <div id="modalCompra" class="modal-overlay" style="display:none;">
+    <div class="modal">
+      <h2>Registrar compra</h2>
+      <form id="compraForm">
+        <label>Obra</label>
+        <select id="compraObraId" required></select>
+
+        <label>Nombre del comprador</label>
+        <input type="text" id="compraComprador" placeholder="Tu nombre" required />
+
+        <label>Cantidad</label>
+        <input type="number" id="compraCantidad" min="1" value="1" required />
+
+        <p id="compraErrores" class="errores"></p>
+
+        <div class="form-botones">
+          <button type="submit">Confirmar compra</button>
+          <button type="button" id="btnCerrarCompra">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="compras-registradas">
+      <h2> Compras registradas</h2>
+      <div id="listaCompras"></div>
+    </section>
+
+    <section class="filtros">
+      <input type="text" id="buscar" placeholder="Buscar por título o artista..." />
+      <input type="text" id="filtroPais" placeholder="Filtrar por país..." />
+      <button id="btnBuscar">Buscar</button>
+      <button id="btnLimpiar">Limpiar</button>
+    </section>
+
+    <section class="form-section">
+      <h2 id="formTitulo">Agregar nueva obra</h2>
+      <form id="obraForm">
+        <input type="hidden" id="obraId" />
+        <input type="text" id="titulo" placeholder="Título de la obra" required />
+        <input type="text" id="artista" placeholder="Artista" required />
+        <input type="text" id="pais" placeholder="País" required />
+        <input type="text" id="categoria" placeholder="Categoría (Pintura, Escultura...)" />
+        <input type="number" id="precio" placeholder="Precio (USD)" min="0" required />
+        <input type="url" id="imagenUrl" placeholder="URL de la imagen (opcional)" />
+        <textarea id="descripcion" placeholder="Descripción"></textarea>
+        <div class="form-botones">
+          <button type="submit" id="btnGuardar">Guardar obra</button>
+          <button type="button" id="btnCancelar" style="display:none;">Cancelar</button>
+        </div>
+      </form>
+      <p id="errores" class="errores"></p>
+    </section>
+
+    <section class="galeria" id="galeria"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

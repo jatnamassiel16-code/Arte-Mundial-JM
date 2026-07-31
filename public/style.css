@@ -1,0 +1,173 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #faf7f2;
+  color: #2b2b2b;
+}
+
+.header {
+  background: linear-gradient(135deg, #4a2c2a, #7a3e2e);
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.header h1 { margin: 0 0 0.3rem; font-size: 2.2rem; }
+.header p { margin: 0 0 1rem; opacity: 0.85; }
+
+.btn-compra-header {
+  background: #d4a017;
+  color: #2b2b2b;
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+}
+.btn-compra-header:hover { background: #b8860b; }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 420px;
+}
+
+.modal h2 { margin-top: 0; }
+
+.modal form { display: flex; flex-direction: column; gap: 0.6rem; }
+.modal label { font-size: 0.85rem; font-weight: 600; color: #555; }
+.modal select, .modal input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.compras-registradas {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.compra-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #eee;
+}
+.compra-item:last-child { border-bottom: none; }
+
+.compra-total {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: bold;
+  color: #7a3e2e;
+}
+.compra-total button { padding: 0.35rem 0.7rem; font-size: 0.8rem; }
+
+.btn-comprar { background: #d4a017; color: #2b2b2b; }
+.btn-comprar:hover { background: #b8860b; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.filtros {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filtros input {
+  flex: 1;
+  min-width: 160px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.1rem;
+  background: #7a3e2e;
+  color: #fff;
+  font-weight: 600;
+}
+
+button:hover { background: #5c2e22; }
+
+#btnCancelar { background: #999; }
+#btnCancelar:hover { background: #777; }
+
+.form-section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+#obraForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+#obraForm textarea { grid-column: 1 / -1; min-height: 70px; }
+.form-botones { grid-column: 1 / -1; display: flex; gap: 0.5rem; }
+
+#obraForm input, #obraForm textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.errores { color: #b00020; font-weight: 600; }
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img { width: 100%; height: 160px; object-fit: cover; }
+.card-body { padding: 0.9rem; flex: 1; display: flex; flex-direction: column; }
+.card-body h3 { margin: 0 0 0.3rem; }
+.card-meta { font-size: 0.85rem; color: #666; margin-bottom: 0.5rem; }
+.card-precio { font-weight: bold; color: #7a3e2e; margin-bottom: 0.6rem; }
+.card-acciones { margin-top: auto; display: flex; gap: 0.5rem; }
+.card-acciones button { flex: 1; font-size: 0.85rem; padding: 0.4rem; }
+.btn-editar { background: #2e6b7a; }
+.btn-editar:hover { background: #234f59; }
+.btn-eliminar { background: #b00020; }
+.btn-eliminar:hover { background: #850018; }

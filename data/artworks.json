@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "titulo": "Amanecer en Kioto",
+    "artista": "Hana Watanabe",
+    "pais": "Japón",
+    "categoria": "Pintura",
+    "precio": 450,
+    "imagenUrl": "https://picsum.photos/seed/kioto/400/300",
+    "descripcion": "Óleo sobre lienzo inspirado en los templos de Kioto al amanecer."
+  },
+  {
+    "id": 2,
+    "titulo": "Máscara Ancestral",
+    "artista": "Kwame Boateng",
+    "pais": "Ghana",
+    "categoria": "Escultura",
+    "precio": 620,
+    "imagenUrl": "https://picsum.photos/seed/mascara/400/300",
+    "descripcion": "Talla en madera de ébano representando espíritus ancestrales."
+  },
+  {
+    "id": 3,
+    "titulo": "Calles de Buenos Aires",
+    "artista": "Lucía Fernández",
+    "pais": "Argentina",
+    "categoria": "Fotografía",
+    "precio": 180,
+    "imagenUrl": "https://picsum.photos/seed/baires/400/300",
+    "descripcion": "Fotografía en blanco y negro del barrio de La Boca."
+  }
+]
