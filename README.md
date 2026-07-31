@@ -40,7 +40,7 @@ El proyecto cuenta con un total de **16 Pull Requests cerrados y fusionados (Mer
 
 ---
 
-## 🛠️ Tecnologías y Herramientas Utilizadas
+##  Tecnologías y Herramientas Utilizadas
 * **Frontend:** HTML5, CSS3 (Diseño responsivo y moderno con variables CSS y tipografías personalizadas).
 * **Lógica:** JavaScript (Vanilla / Fetch API para comunicación asíncrona con el backend).
 * **Control de Versiones:** Git, GitHub y Git Flow.
